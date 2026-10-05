@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dignity of Labour</title>
+<meta name="description" content="Dignity of Labour: an interactive exhibition on work, rights and respect in India. A Class 12 CBSE Work Experience (SEWA) project.">
+<meta name="theme-color" content="#EEECE6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%2316150F%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%278%27 fill=%27%23F2A900%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<noscript><p style="margin:0;padding:24px;font:600 18px/1.4 system-ui,sans-serif;background:#F2A900;color:#16150F">This exhibition needs JavaScript to run. Please turn it on and reload.</p></noscript>
+<a class="skip" href="#topic-1">Skip to content</a>
+<main id="cv-main" data-topic="0">
+<section class="scene cv tall dark" id="cv" aria-label="Cover: Dignity of Labour"><div class="pin"></div></section>
+</main>
+<main id="topic-1" data-topic="1">
+<section class="scene s0t dark" id="s0t" aria-label="Topic 1: What we call work"><p class="if">Topic 1</p><h2>What we call <mark>work</mark></h2><p class="soft">An ordinary day. Three words. The work we don’t call work.</p></section>
+
+<section class="scene s0 tall dark" id="s0" aria-label="Overture: a glass of tea">
+  <div class="pin"><canvas id="glw" aria-hidden="true"></canvas>
+    <div class="caps"><p>A glass of tea.</p><p>Someone poured it.</p><p>Someone grew the leaf. Someone carried the water.</p><p>Someone swept the ground you stand on.</p><p>Someone carried it here.</p><p>Behind one glass: a street. Behind the street: a city.</p></div>
+    <span class="cue" id="cue" aria-hidden="true">Scroll</span></div>
+</section>
+
+<section class="scene s1" id="s1" aria-label="The question">
+  <h1><span>What</span> <span>do we</span> <span>mean by</span> <span class="big">“work”?</span></h1>
+  <p class="soft">Some jobs look important. Keep scrolling and see which.</p>
+</section>
+
+<section class="scene s2 tall" id="s2" aria-label="The ordinary day">
+  <div class="pin split">
+    <div>
+      <p class="lede">Your ordinary day, before you did anything.</p>
+      <ul class="objs" id="objs"></ul>
+    </div>
+    <ol class="chain" id="chain" aria-live="polite"></ol>
+  </div>
+</section>
+
+<section class="scene s3" id="s3" aria-label="Three words">
+  <div class="w-dignity"><h2>Dignity</h2><p>The inherent worth of a human being, and the right to be respected for it.</p></div>
+  <div class="w-labour"><h2>Labour</h2>
+    <div class="tabs" role="tablist" id="ltabs"></div>
+    <p id="ldef">Any physical or mental effort that produces goods, provides services, or keeps society running.</p></div>
+  <div class="w-toil" id="toil"><h2>Toil</h2><p>Hard, continuous, exhausting physical work. Not lesser work: honorable and indispensable.</p></div>
+</section>
+
+<section class="scene s4 tall" id="s4" aria-label="The hierarchy we invented">
+  <div class="pin">
+    <ul class="ladder" id="ladder"></ul>
+    <h2 class="verdict" id="verdict">Different work ≠ different human worth.</h2>
+  </div>
+</section>
+
+<section class="scene s5" id="s5" aria-label="Every honest occupation counts">
+  <h2>Every honest occupation counts.</h2>
+  <p class="soft">Pull any one of them. See what it holds up. Then take it away.</p>
+  <div class="field" id="field"><svg id="edges" aria-hidden="true"></svg></div>
+  <div class="readout" id="readout" aria-live="polite"></div>
+</section>
+
+<section class="scene s5p" id="s5p" aria-label="Documentary: a working market">
+  <figure class="ph" data-media="varanasi"></figure>
+  <div class="s5pt"><p>Paid. Unpaid.<br>Seen. Unseen.</p><p class="s5ps">All of it is work.</p></div>
+</section>
+
+<section class="scene s6 tall" id="s6" aria-label="The work we don't call work">
+  <div class="pin">
+    <p class="lede">The work we don’t call work.</p>
+    <div class="num"><b id="mins">0</b><span>minutes, every day</span></div>
+    <div class="day" id="day" role="img" aria-label="A 24 hour day, with about 5.6 hours filled by unpaid domestic and care work"></div>
+    <ul class="tasks" id="tasks" aria-label="Kinds of unpaid work"></ul>
+    <p class="cap">Average time Indian women spend on unpaid domestic and care work: cooking, cleaning, childcare, eldercare. Men: 31 to 104 minutes, depending on the survey.</p>
+  </div>
+</section>
+
+<section class="scene s7 tall" id="s7" aria-label="Quotation">
+  <div class="pin"><blockquote id="q1"></blockquote><cite id="c1"></cite></div>
+</section>
+<section class="scene s7b" id="s7b" aria-label="Quotation"><blockquote id="q2"></blockquote><cite id="c2"></cite></section>
+
+<section class="scene s8" id="s8" aria-label="The definition">
+  <h2 class="dol"><span>Dignity</span> <span>of</span> <span>Labour</span></h2>
+  <p class="def">The principle that every honest occupation, manual or mental, paid or unpaid, has equal worth. Its value comes from honest effort and what it gives the community, not from the education it needs or the pay it earns.</p>
+</section>
+
+<section class="scene s9 tall dark" id="s9" aria-label="Transition">
+  <div class="pin"><p class="if">If every form of labour matters…</p><h2 id="why">Why do we still fail to value some of it?</h2></div>
+</section>
+</main>
+<main id="topic-2" data-topic="2">
+<section class="scene s10 dark" id="s10" aria-label="Topic 2: Why it matters"><p class="if">Topic 2</p><h2>Why it <mark>matters</mark></h2><p class="soft">A society runs on many kinds of work.</p></section>
+
+<section class="scene s11 tall" id="s11" aria-label="The value of toil"><div class="pin">
+  <p class="lede">The value of toil: take the work away.</p>
+  <ul class="pairs" id="pairs"></ul>
+  <h2 class="charity" id="charity">Not charity. Recognition of interdependence.</h2>
+  <p class="cap">Complex societies are held together by the interdependence that the division of labour creates.</p>
+</div></section>
+
+<section class="scene s12 tall" id="s12" aria-label="Gandhi: bread labour"><div class="pin">
+  <p class="lede">Gandhi’s idea: bread labour.</p>
+  <p class="bl">Everyone, whatever their intellectual capacity or financial status, must do enough physical labour to earn their daily bread.</p>
+  <p class="soft bh">In his ashrams, these tasks were mandatory for every resident:</p>
+  <ul class="bt" id="bt"></ul>
+</div></section>
+<section class="scene s7b" id="s12b" aria-label="Quotation"><blockquote id="q3"></blockquote><cite id="c3"></cite></section>
+
+<section class="scene s13 tall" id="s13" aria-label="Ambedkar: a division of labourers"><div class="pin">
+  <p class="lede">Ambedkar’s critique.</p>
+  <blockquote id="q4"></blockquote><cite id="c4"></cite>
+  <div class="cmp" aria-hidden="true"><p>Division of labour</p><div class="bar one" id="bar1"></div><p>Division of labourers</p><div class="bar" id="bar2"></div></div>
+  <p class="cap">Ambedkar argued that dignity of labour is impossible under caste: occupations become hereditary and inescapable, tied to stigma, purity and pollution. For him the occupational hierarchy itself had to be annihilated, not merely the manual labour forced on oppressed groups idealised.</p>
+</div></section>
+
+<section class="scene s14 tall" id="s14" aria-label="Labour Day, 1 May"><div class="pin">
+  <p class="lede">Labour Day, 1 May.</p>
+  <div class="num"><b id="yr">1886</b><span id="yl">Chicago</span></div>
+  <div class="ev"><p id="e1">The Haymarket affair: workers striking for an eight-hour workday faced severe police violence. The international socialist and labour movements then chose 1 May to honour the victims and press for fair working conditions.</p>
+  <p id="e2">The first formal, organised celebration of Labour Day in India, led by labour union leader Singaravelu Chettiar. Two meetings: at Triplicane beach and opposite the Madras High Court. The red flag was unfurled in India for the first time.</p></div>
+  <div class="symw" id="symw"><p class="soft">The day stands for</p><ul class="sym" id="sym"></ul></div>
+</div></section>
+</main>
+<main id="topic-3" data-topic="3">
+<section class="scene s15" id="s15" aria-label="Topic 3: The people behind everyday life"><p class="lede">Topic 3</p><h2>The people behind <mark>everyday life.</mark></h2><p class="soft">Everyday occupations. Essential workers. A day without them.</p></section>
+
+<section class="scene sw tall dark" id="s16w" aria-label="The street comes alive"><div class="pin"><canvas class="glc" id="glt" aria-hidden="true"></canvas><p class="lede">A street, built by the people on it.</p><div class="caps" id="caps16"></div></div></section>
+
+<section class="scene s16 tall" id="s16" aria-label="Everyday occupations: the street economy"><div class="pin"><figure class="ph s16ph" data-media="maize"></figure>
+  <p class="lede">Everyday occupations: the street economy.</p>
+  <ul class="roles" id="roles"></ul>
+  <p class="bl2" id="bl2">Vital micro-entrepreneurship: affordable goods, fresh produce and essential services, straight to the people who need them.</p>
+  <div class="symw" id="facew"><p class="soft">What many of them face:</p><ul class="sym" id="faces"></ul></div>
+</div></section>
+
+<section class="scene s17 tall" id="s17" aria-label="The Street Vendors Act, 2014"><div class="pin">
+  <p class="lede">The law that tried to fix it.</p>
+  <div class="num"><b id="pct">0%</b><span>of every Town Vending Committee must be street vendors themselves</span></div>
+  <div class="tvc" id="tvc" role="img" aria-label="10 blocks, 4 filled: 40 percent"></div>
+  <p class="cap">The Street Vendors Act, 2014 formally recognises vendors’ occupational rights. Town Vending Committees survey vending areas, set zone capacity and issue vending certificates to prevent arbitrary eviction. One-third of the vendor representatives must be women. The law exists; turning it into everyday security is the challenge.</p>
+</div></section>
+
+<section class="scene s18 tall" id="s18" aria-label="Essential and rarely noticed"><div class="pin">
+  <p class="lede">Essential, and rarely noticed.</p>
+  <ul class="roles" id="unseen"></ul>
+  <h2 class="charity" id="inv">The most essential labour is often the most invisible.</h2>
+  <p class="cap">Domestic workers’ private workplaces long kept them outside minimum-wage, maternity-benefit and workmen’s-compensation laws. The Tamil Nadu Domestic Workers Welfare Board, set up in 2007, was a step toward social security.</p>
+</div></section>
+
+<section class="scene s19 sw tall dark" id="s19" aria-label="A day without them"><div class="pin"><canvas class="glc" id="gls" aria-hidden="true"></canvas><p class="lede">A day without them (a hypothetical).</p><div class="caps" id="caps19"></div></div>
+  <div class="split alt"><ul class="objs" id="gl"></ul><p class="out" id="out" aria-live="polite"></p></div></section>
+
+<section class="scene s20 tall" id="s20" aria-label="Safai karamcharis during the pandemic"><div class="pin">
+  <p class="lede">Safai karamcharis during the pandemic.</p>
+  <div class="num"><b>40–50</b><span>households, every day</span></div>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <p class="cap">Archana Chabuskwar and Anita, in Mumbai, cleared garbage and sludge from 40 to 50 households daily for mere daily wages, while water shortages kept them from washing their hands, let alone buying hand sanitizer.</p>
+  <h2 class="charity" id="sub">A whole system, subsidised by low-wage, high-risk toil.</h2>
+</div></section>
+
+</main>
+<main id="topic-4" data-topic="4">
+<section class="scene s21 dark" id="s21" aria-label="Topic 4: Dignity and human rights"><p class="if">Topic 4</p><h2>Dignity and <mark>human rights</mark></h2><p class="soft">Not merely a social ideal: linked to binding universal rights.</p></section>
+
+<section class="scene rw sw tall dark" id="s22w" aria-label="Three frameworks: an interactive 3D model of workers' rights"><div class="pin"><canvas class="glc" id="glr" aria-hidden="true"></canvas><p class="lede">Rights, built into three frameworks.</p>
+  <div class="caps" id="capsr"></div>
+  <div class="rp" id="rp"><div class="rpb" id="rpb" role="group" aria-label="Frameworks"></div><div aria-live="polite"><h3 id="rph"></h3><p id="rpt"></p></div><ul class="rpc" id="rpc"></ul></div>
+</div></section>
+
+<section class="scene s22 tall" id="s22" aria-label="The Universal Declaration of Human Rights"><div class="pin">
+  <p class="lede">The Universal Declaration of Human Rights.</p>
+  <div class="num"><b>1948</b><span>10 December, now Human Rights Day</span></div>
+  <div class="uart">
+    <div class="symw" id="a23w"><p class="soft">Article 23: work</p><ul class="sym" id="a23"></ul></div>
+    <div class="symw" id="a24w"><p class="soft">Article 24: rest</p><ul class="sym" id="a24"></ul></div>
+  </div>
+  <h2 class="charity" id="udc">Work as a means to a dignified existence, not a vehicle for exploitation.</h2>
+</div></section>
+
+<section class="scene s23 tall" id="s23" aria-label="Workers' rights in the Indian Constitution"><div class="pin">
+  <p class="lede">The Constitution of India.</p>
+  <ul class="arts" id="arts"></ul>
+  <h2 class="charity" id="asi">Under Article 23, paying less than the statutory minimum wage is forced labour.</h2>
+  <p class="cap" id="asic">PUDR v. Union of India, 1982, the Asiad Workers Case. Enforcing the minimum wage is a fundamental constitutional right that protects human dignity, not only an administrative matter.</p>
+</div></section>
+
+<section class="scene s24 tall" id="s24" aria-label="Decent work"><div class="pin">
+  <p class="lede">Decent work: what it means in practice.</p>
+  <div class="num"><b>4</b><span>pillars of the ILO Decent Work Agenda, formalised in 1999</span></div>
+  <ol class="pil" id="pil"></ol>
+  <p class="bl2" id="sdg">Also Goal 8 of the UN Sustainable Development Goals: full, productive employment for all women and men by 2030.</p>
+</div></section>
+</main>
+<main id="topic-5" data-topic="5">
+<section class="scene s25" id="s25" aria-label="Topic 5: When dignity is denied"><p class="lede">Topic 5</p><h2>When dignity is <mark>denied.</mark></h2><p class="soft">Stigma. A case study. Rights respected and violated.</p></section>
+
+<section class="scene s26 tall" id="s26" aria-label="Stigma and unequal respect"><div class="pin">
+  <p class="lede">Stigma: unequal respect for occupations.</p>
+  <ul class="roles" id="r5"></ul>
+  <div class="symw" id="lblw"><p class="soft">Traditionally labelled</p><ul class="sym" id="lbl"></ul></div>
+  <h2 class="charity" id="stc">Stigma strips dignity and normalises exploitative working conditions.</h2>
+  <p class="cap" id="stp">Relegated to marginalised Dalit and Bahujan communities, these workers are seen through a lens of inherited inferiority, not as citizens providing vital civic services. The lack of respect correlates with suppressed wages and abysmal working conditions.</p>
+</div></section>
+
+<section class="scene s27 tall" id="s27" aria-label="Case study: sanitation workers"><div class="pin">
+  <p class="lede">Case study: sanitation workers.</p>
+  <p class="stm">Manual scavenging: the most severe and lethal violation of the dignity of labour in modern India.</p>
+  <div class="tlw"><svg id="tl" viewBox="0 0 1000 200" preserveAspectRatio="xMinYMid meet" role="img" aria-label="Timeline: 1993 Act, 2013 Act, 2014 Supreme Court judgment, with compensation reaching back to 1993"><line class="tk" x1="60" y1="130" x2="940" y2="130"/><path class="tf" id="tlf" d="M60 130H898" pathLength="1"/><path class="ta" id="tla" d="M940 130C940 -20 60 -20 60 130" pathLength="1"/><text class="tn" id="tln" x="500" y="54">compensation: deaths since 1993</text><text class="tn" id="tly" x="480" y="114">20 years</text><circle id="tc1" cx="60" cy="130" r="11"/><circle id="tc2" cx="898" cy="130" r="11"/><circle id="tc3" cx="940" cy="130" r="11"/><text class="ty" x="60" y="185" text-anchor="start">1993</text><text class="ty" x="905" y="185" text-anchor="end">2013</text><text class="ty" x="933" y="185" text-anchor="start">2014</text></svg></div>
+  <div class="num"><b id="my">1993</b><span id="ml">The 1993 Act</span></div>
+  <div class="ev" id="mev"></div>
+</div></section>
+
+<section class="scene s28 tall" id="s28" aria-label="Rights violated and respected: news reports"><div class="pin">
+  <p class="lede" id="nla">Rights violated: Chennai.</p>
+  <div class="num"><b id="nn">0</b><span id="nl">days of hunger strike by Dalit sanitation workers in Chennai</span></div>
+  <div class="ev wide">
+    <p id="nea">They protested arbitrary job dismissals and demanded permanent, secure employment. Workers testified to handling broken glass, needles and human excreta with bare hands, without adequate protective gear. Prolonged unemployment, mounting debt and hazardous conditions led to severe mental distress and tragic fatalities.</p>
+    <p id="neb">The NAMASTE scheme (National Action for Mechanised Sanitation Ecosystem) aims to mechanise all hazardous cleaning. By late 2025 it had validated over 88,448 workers and distributed over 83,000 PPE kits. Livelihood support, skill development and safety equipment: a tangible effort to restore occupational dignity.</p>
+  </div>
+</div></section>
+
+</main>
+<main id="topic-6" data-topic="6">
+<section class="scene s29 dark" id="s29" aria-label="Topic 6: India in context"><p class="if">Topic 6</p><h2>India in <mark>context</mark></h2><p class="soft">Who works, how, and what is being done about it.</p></section>
+
+<section class="scene s30 tall" id="s30" aria-label="India's workforce at a glance"><div class="pin">
+  <p class="lede">The workforce at a glance (PLFS 2025).</p>
+  <div class="num"><b id="emp">0%</b><span>of workers are self-employed, including unpaid helpers</span></div>
+  <div class="mix" id="mix" role="img" aria-label="Self-employed about 56.2 percent, regular wage or salaried about 23.6 percent, casual labour about 20.2 percent"></div>
+  <ul class="lg" id="lg"></ul>
+  <p class="cap">A dominant informal economy of self-employment and casual labour. The majority of the workforce operates without traditional employer-employee safety nets.</p>
+</div></section>
+
+<section class="scene s31 tall" id="s31" aria-label="The gig and platform economy"><div class="pin">
+  <p class="lede">Gig and platform work.</p>
+  <div class="num"><b id="gn">0.0</b><span id="gt"></span></div>
+  <div class="shr" role="img" aria-label="Share of the non-agricultural workforce"><i id="gsi"></i></div>
+  <p class="cap" id="gp"></p>
+</div></section>
+
+<section class="scene s32 tall" id="s32" aria-label="Pay, safety and social security"><div class="pin">
+  <p class="lede">Outside the safety net: pay, safety, social security.</p>
+  <div class="symw" id="lw"><p class="soft">Frequently classed as “independent contractors”, not employees, gig workers are stripped of</p><ul class="sym" id="lost"></ul></div>
+  <div class="num"><b id="acc">0%</b><span>of gig workers face accidents</span></div>
+  <div class="tvc" id="avc" role="img" aria-label="10 blocks, 2.7 filled: 27 percent"></div>
+  <p class="cap" id="acp">Platform delivery partners face high accident rates, often made worse by algorithmic pressure to deliver fast and work long hours.</p>
+</div></section>
+
+<section class="scene s33 tall" id="s33" aria-label="The gender gap in work"><div class="pin">
+  <p class="lede">The gender gap in work.</p>
+  <div class="num"><b id="fl">0.0%</b><span>female labour force participation, 2023-24</span></div>
+  <p class="gl">Female</p><div class="shr"><i id="gf"></i></div>
+  <p class="gl">Male, about 79%</p><div class="shr m"><i id="gm"></i></div>
+  <p class="cap" id="gcp">The gap is largely driven by the heavy, invisible burden of unpaid care work shouldered by women, which restricts their ability to secure formal, well-paying employment. Even when women enter the workforce, their nominal wage growth in casual labour remains lower.</p>
+</div></section>
+
+<section class="scene s34 tall" id="s34" aria-label="The Code on Social Security, 2020"><div class="pin">
+  <p class="lede">What recent government steps aim to change.</p>
+  <h2 class="charity" id="cd">For the first time, the law recognises gig and platform workers.</h2>
+  <p class="cap" id="cc">The Code on Social Security, 2020 subsumes nine older labour laws into one framework. A Social Security Fund, partly financed by aggregator contributions of 1–2% of annual turnover, is to provide life insurance, disability cover, maternity benefits and health protection. The Code also universalizes Employees’ Provident Fund coverage and reduces gratuity eligibility for Fixed-Term Employees to one year.</p>
+</div></section>
+
+<section class="scene s35 tall" id="s35" aria-label="e-Shram"><div class="pin">
+  <p class="lede">e-Shram: a National Database of Unorganized Workers.</p>
+  <div class="num"><b id="es">0.00+</b><span>crore unorganized workers registered by August 2025</span></div>
+  <p class="cap" id="ec">Women are over 53% of registrants. Aadhaar verification formalizes worker identity and is meant to deliver social security benefits to migrant labourers, domestic workers and platform workers across state lines, so that mobility does not mean a loss of welfare benefits.</p>
+</div></section>
+
+</main>
+
+<main id="topic-7" data-topic="7">
+<section class="scene s36 dark" id="s36" aria-label="Topic 7: Real stories and voices"><p class="if">Topic 7</p><h2>Real stories and <mark>voices</mark></h2><p class="soft">Documented accounts, in the workers’ own words.</p></section>
+
+<section class="scene s37 tall" id="s37" aria-label="Rita akka, sanitation worker"><div class="pin">
+  <p class="lede">Rita akka, a sanitation worker in Chennai.</p>
+  <div class="num"><b class="v">₹0</b><span class="u"></span></div>
+  <p class="cap"></p><h2 class="charity z"></h2>
+</div></section>
+
+<section class="scene s38 tall" id="s38" aria-label="Amulu, vegetable street vendor"><div class="pin">
+  <p class="lede">Amulu, a vegetable street vendor.</p>
+  <div class="num"><b class="v">0+</b><span class="u"></span></div>
+  <p class="cap"></p>
+</div></section>
+
+<section class="scene s7b" id="s39" aria-label="Amulu, in her own words"><p class="lede">Amulu, in her own words.</p><blockquote id="q5"></blockquote><cite id="c5"></cite></section>
+
+<section class="scene s40 tall" id="s40" aria-label="Gudla Mangamma, Hyderabad"><div class="pin">
+  <p class="lede">Gudla Mangamma, in her own words.</p>
+  <blockquote id="q6"></blockquote><cite id="c6"></cite>
+  <p class="cap" id="mc"></p>
+</div></section>
+
+<section class="scene s41 tall" id="s41" aria-label="Bhateri Devi, Mumbai"><div class="pin">
+  <p class="lede">Bhateri Devi, Mumbai.</p>
+  <div class="num"><b class="v">₹0</b><span class="u"></span></div>
+  <p class="cap"></p>
+</div></section>
+
+<section class="scene s7b" id="s42" aria-label="Shyla, in her own words"><p class="lede">Shyla, a nursing student whose father died cleaning a septic tank.</p><blockquote id="q7"></blockquote><cite id="c7"></cite></section>
+
+<section class="scene s43 tall" id="s43" aria-label="Lessons from the stories"><div class="pin">
+  <p class="lede">What the stories show.</p>
+  <h2 class="charity" id="l7d"></h2>
+  <p class="cap" id="l7c"></p>
+  <div class="symw" id="l7w"><p class="soft" id="l7s"></p><ul class="sym" id="l7p"></ul></div>
+</div></section>
+
+</main>
+<main id="topic-8" data-topic="8">
+<section class="scene s44 dark" id="s44" aria-label="Topic 8: What can change"><p class="if">Topic 8</p><h2>What can <mark>change</mark></h2><p class="soft">Everyday respect, a community roadmap, reflection and a pledge.</p></section>
+
+<section class="scene s45 tall" id="s45" aria-label="Everyday respect"><div class="pin"><p class="lede"></p><h2 class="charity"></h2><p class="cap"></p></div></section>
+<section class="scene s46 tall" id="s46" aria-label="Fair treatment"><div class="pin"><p class="lede"></p><h2 class="charity"></h2><p class="cap"></p></div></section>
+<section class="scene s47 tall" id="s47" aria-label="Action plan"><div class="pin"><p class="lede"></p><h2 class="charity"></h2><ol class="plan"></ol></div></section>
+<section class="scene s48 tall" id="s48" aria-label="Personal reflection"><div class="pin"><p class="lede"></p><h2 class="charity"></h2><p class="cap"></p><div class="symw"><p class="soft"></p><ul class="sym"></ul></div></div></section>
+<section class="scene s49 tall" id="s49" aria-label="Conclusion"><div class="pin"><p class="lede"></p><h2 class="charity"></h2><p class="cap"></p><p class="q8 cap"></p></div></section>
+<section class="scene s50 tall dark" id="s50" aria-label="My SEWA Promise"><div class="pin"><p class="lede"></p><h2 class="charity"></h2><div class="symw"><ul class="sym"></ul></div><h2 class="fin"></h2></div></section>
+<section class="scene s51 dark" id="s51" aria-label="The exhibition: eight chapters"><p class="if">The exhibition</p><ol class="ex" id="ex"></ol></section>
+<section class="scene s52 dark" id="s52" aria-label="Project Team">
+
+  <!-- eyebrow + title block -->
+  <div class="cr-top">
+    <div class="cr-eyebrow">
+      <span class="cr-line-dec" aria-hidden="true"></span>
+      <span class="cr-label">Credits</span>
+    </div>
+    <h2 class="cr-heading">The people<br>behind the work.</h2>
+  </div>
+
+  <!-- rows -->
+  <div class="cr-body">
+
+    <div class="cr-row">
+      <div class="cr-meta">
+        <span class="cr-num">01</span>
+        <span class="cr-role">Project Head</span>
+      </div>
+      <div class="cr-names">
+        <div class="cr-nwrap"><span>Shree Kumaran</span></div>
+      </div>
+    </div>
+
+    <div class="cr-row">
+      <div class="cr-meta">
+        <span class="cr-num">02</span>
+        <span class="cr-role">Technical Lead<i>Domain &amp; Deployment</i></span>
+      </div>
+      <div class="cr-names">
+        <div class="cr-nwrap"><span>Mithun</span></div>
+      </div>
+    </div>
+
+    <div class="cr-row">
+      <div class="cr-meta">
+        <span class="cr-num">03</span>
+        <span class="cr-role">Content Research<i>&amp; Documentation</i></span>
+      </div>
+      <div class="cr-names">
+        <div class="cr-nwrap"><span>Prithvi Raj</span></div>
+        <div class="cr-nwrap"><span>Sowmesh</span></div>
+      </div>
+    </div>
+
+    <div class="cr-row">
+      <div class="cr-meta">
+        <span class="cr-num">04</span>
+        <span class="cr-role">3D Visual Design<i>&amp; Planning</i></span>
+      </div>
+      <div class="cr-names">
+        <div class="cr-nwrap"><span>Devesh</span></div>
+        <div class="cr-nwrap"><span>Adesh</span></div>
+      </div>
+    </div>
+
+    <div class="cr-row">
+      <div class="cr-meta">
+        <span class="cr-num">05</span>
+        <span class="cr-role">Testing &amp; Debugging</span>
+      </div>
+      <div class="cr-names">
+        <div class="cr-nwrap"><span>Sachiv Sarathi</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- closing line -->
+  <div class="cr-foot">
+    <span class="cr-badge">SEWA · Class 12 · 2026–27</span>
+    <span class="cr-close">Made with purpose.</span>
+  </div>
+
+</section>
+</main>
+<div class="chap" id="chap" aria-hidden="true"></div>
+<nav class="rail" id="rail" aria-label="Scene progress"><i id="railfill"></i><ol id="railist"></ol></nav>
+
+<script src="content.js"></script>
+<script src="core.js"></script>
+<script src="three.min.js"></script>
+<script src="world.js"></script>
+<script src="title-t1.js"></script>
+<script src="scenes.js"></script>
+<script src="world-street.js"></script>
+<script src="world-rights.js"></script>
+<script src="world-data.js"></script>
+<script src="world-stories.js"></script>
+<script src="cover.js"></script>
+<script src="rail-index.js"></script>
+<script>DOL.start()</script>
+</body>
+</html>
